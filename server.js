@@ -6,7 +6,7 @@ const connectDB = require("./src/config/db");
 const coordinateRoutes = require("./src/routes/coordinates.routes");
 const coordinateSocket = require("./src/sockets/coordinatesSockets");
 const logger = require("./src/utils/logger");
-
+require("dotenv").config();
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
